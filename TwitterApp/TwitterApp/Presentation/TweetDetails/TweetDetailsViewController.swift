@@ -17,7 +17,7 @@ class TweetDetailsViewController: UIViewController {
     
     private var viewModel: TweetDetailsViewModel!
     
-    static func initController(_ tweet: Tweet) -> TweetDetailsViewController? {
+    static func initController(_ tweet: LocationTweet) -> TweetDetailsViewController? {
         if let tweetDetailsVC = viewController(fromStoryboard: "Main", withId: "TweetDetailsViewController")
             as? TweetDetailsViewController {
             tweetDetailsVC.viewModel = TweetDetailsViewModelImpl(tweet: tweet)

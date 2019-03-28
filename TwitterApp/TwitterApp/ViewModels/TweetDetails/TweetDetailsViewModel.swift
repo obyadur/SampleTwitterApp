@@ -20,7 +20,7 @@ protocol TweetDetailsViewModel {
 }
 
 class TweetDetailsViewModelImpl: TweetDetailsViewModel {
-    private let tweet: Tweet!
+    private let tweet: LocationTweet!
     private let api: TwitterService!
     
     var id: String {
@@ -44,7 +44,7 @@ class TweetDetailsViewModelImpl: TweetDetailsViewModel {
         return tweet.text ?? ""
     }
     
-    init(tweet: Tweet, api: TwitterService =  TwitterServiceImpl()) {
+    init(tweet: LocationTweet, api: TwitterService =  TwitterServiceImpl()) {
         self.tweet = tweet
         self.api = api
     }

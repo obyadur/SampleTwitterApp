@@ -18,6 +18,7 @@ class TweetMapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = Localized.TweetMap.navigationTitle
+        self.addSearchBarItem()
         
         viewModel = TweetMapViewModelImpl()
         tweetMapView.delegate = self
@@ -31,6 +32,8 @@ class TweetMapViewController: UIViewController {
         }
         LocationManager.shared.startUpdating()
     }
+    
+    
 }
 
 private extension TweetMapViewController {
@@ -52,9 +55,20 @@ private extension TweetMapViewController {
         }
     }
     
-    func navigateToTweetDetails(_ tweet: Tweet) {
+    func navigateToTweetDetails(_ tweet: LocationTweet) {
         if let detailsVC = TweetDetailsViewController.initController(tweet) {
             self.navigationController?.pushViewController(detailsVC, animated: true)
+        }
+    }
+    
+    func addSearchBarItem() {
+        let searchBarItem = UIBarButtonItem(title: Localized.TweetMap.navigationBarItemTitle, style: .plain, target: self, action: #selector(tapSearchTagBarItem))
+        self.navigationItem.rightBarButtonItem  = searchBarItem
+    }
+    
+    @objc func tapSearchTagBarItem() {
+        if let searchVC = TweetTagSearchViewController.initController() {
+            self.navigationController?.pushViewController(searchVC, animated: true)
         }
     }
 }

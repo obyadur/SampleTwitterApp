@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Tweet {
+struct LocationTweet {
     var id: Int?
     var name: String?
     var text: String?

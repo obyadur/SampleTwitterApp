@@ -21,6 +21,7 @@ enum TwitterRequestImpl: TwitterRequest {
     case fetch(latitude: Double, longitude: Double, distance: String)
     case favourite(tweetId: String)
     case retweet(tweetId: String)
+    case searchHashTag(hashTag: String)
     
     var url: String {
         return baseUrl + endpoint
@@ -38,6 +39,8 @@ enum TwitterRequestImpl: TwitterRequest {
             return "favorites/create.json"
         case .retweet(let tweetId):
             return "statuses/retweet/" + tweetId + ".json"
+        case .searchHashTag:
+            return "search/tweets.json"
         }
     }
     
@@ -49,6 +52,8 @@ enum TwitterRequestImpl: TwitterRequest {
             return .POST
         case .retweet:
             return .POST
+        case .searchHashTag:
+            return .GET
         }
     }
     
@@ -61,11 +66,16 @@ enum TwitterRequestImpl: TwitterRequest {
             return [Params.id: tweetId]
         case .retweet(let tweetId):
             return [Params.id: tweetId]
+        case .searchHashTag(let hashTag):
+            let query = "#" + hashTag
+            return [Params.Fetch.query: query, Params.Fetch.resultType: "recent"]
         }
     }
     
 }
 
+
+typealias Parameters = [String: Any]
 
 enum Params {
     static let id = "id"
@@ -77,9 +87,6 @@ enum Params {
         static let distance = "1mi"
     }
 }
-
-
-typealias Parameters = [String: Any]
 
 enum RequestMethod: String {
     case GET

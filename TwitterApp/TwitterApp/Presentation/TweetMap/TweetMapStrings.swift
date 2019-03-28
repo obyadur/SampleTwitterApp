@@ -11,5 +11,6 @@ import Foundation
 extension Localized {
     enum TweetMap {
         static let navigationTitle = "Nearby Tweets".localized
+        static let navigationBarItemTitle = "Tags".localized
     }
 }

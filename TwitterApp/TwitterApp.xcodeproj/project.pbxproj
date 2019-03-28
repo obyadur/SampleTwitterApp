@@ -16,8 +16,8 @@
 		9AA46DD1224BD3E5007FE42F /* TweetMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA46DD0224BD3E5007FE42F /* TweetMapViewController.swift */; };
 		9AA46DD8224BD460007FE42F /* TweetMapLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA46DD7224BD460007FE42F /* TweetMapLayoutView.swift */; };
 		9AA46DDA224BD4A1007FE42F /* TweetMapLayoutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AA46DD9224BD4A1007FE42F /* TweetMapLayoutView.xib */; };
-		9AA46DDE224BD680007FE42F /* Tweets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA46DDD224BD680007FE42F /* Tweets.swift */; };
-		9AA46DE0224BD689007FE42F /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA46DDF224BD689007FE42F /* Tweet.swift */; };
+		9AA46DDE224BD680007FE42F /* LocationTweets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA46DDD224BD680007FE42F /* LocationTweets.swift */; };
+		9AA46DE0224BD689007FE42F /* LocationTweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA46DDF224BD689007FE42F /* LocationTweet.swift */; };
 		9AA46DE2224BD706007FE42F /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA46DE1224BD706007FE42F /* Coordinates.swift */; };
 		9AA46DE9224BDC9C007FE42F /* TweetDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA46DE8224BDC9C007FE42F /* TweetDetailsViewController.swift */; };
 		9AA46DEC224BDDFD007FE42F /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA46DEB224BDDFD007FE42F /* UIViewController+Extension.swift */; };
@@ -33,6 +33,12 @@
 		9AA46E03224C1BDF007FE42F /* TwitterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA46E02224C1BDF007FE42F /* TwitterRequest.swift */; };
 		9AA46E07224C21BA007FE42F /* TweetDetailsStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA46E06224C21BA007FE42F /* TweetDetailsStrings.swift */; };
 		9AA46E09224C23A2007FE42F /* TweetMapStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA46E08224C23A2007FE42F /* TweetMapStrings.swift */; };
+		9AA46E0E224C3996007FE42F /* TweetSearchStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA46E0D224C3996007FE42F /* TweetSearchStrings.swift */; };
+		9AA46E10224C39FB007FE42F /* TweetTagSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA46E0F224C39FB007FE42F /* TweetTagSearchViewController.swift */; };
+		9AA46E12224C4CF5007FE42F /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA46E11224C4CF5007FE42F /* Media.swift */; };
+		9AA46E14224C5116007FE42F /* HashTagMedias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA46E13224C5116007FE42F /* HashTagMedias.swift */; };
+		9AA46E17224C572E007FE42F /* TweetTagSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA46E16224C572E007FE42F /* TweetTagSearchViewModel.swift */; };
+		9AA46E19224C6192007FE42F /* HashTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA46E18224C6192007FE42F /* HashTagCell.swift */; };
 		9BA1998CB82CE613C15D6A84 /* Pods_TwitterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97C4B266025E5703FFF3779 /* Pods_TwitterApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,8 +66,8 @@
 		9AA46DD0224BD3E5007FE42F /* TweetMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetMapViewController.swift; sourceTree = "<group>"; };
 		9AA46DD7224BD460007FE42F /* TweetMapLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetMapLayoutView.swift; sourceTree = "<group>"; };
 		9AA46DD9224BD4A1007FE42F /* TweetMapLayoutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetMapLayoutView.xib; sourceTree = "<group>"; };
-		9AA46DDD224BD680007FE42F /* Tweets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweets.swift; sourceTree = "<group>"; };
-		9AA46DDF224BD689007FE42F /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		9AA46DDD224BD680007FE42F /* LocationTweets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTweets.swift; sourceTree = "<group>"; };
+		9AA46DDF224BD689007FE42F /* LocationTweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTweet.swift; sourceTree = "<group>"; };
 		9AA46DE1224BD706007FE42F /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		9AA46DE8224BDC9C007FE42F /* TweetDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDetailsViewController.swift; sourceTree = "<group>"; };
 		9AA46DEB224BDDFD007FE42F /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -77,6 +83,12 @@
 		9AA46E02224C1BDF007FE42F /* TwitterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterRequest.swift; sourceTree = "<group>"; };
 		9AA46E06224C21BA007FE42F /* TweetDetailsStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDetailsStrings.swift; sourceTree = "<group>"; };
 		9AA46E08224C23A2007FE42F /* TweetMapStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetMapStrings.swift; sourceTree = "<group>"; };
+		9AA46E0D224C3996007FE42F /* TweetSearchStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetSearchStrings.swift; sourceTree = "<group>"; };
+		9AA46E0F224C39FB007FE42F /* TweetTagSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTagSearchViewController.swift; sourceTree = "<group>"; };
+		9AA46E11224C4CF5007FE42F /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		9AA46E13224C5116007FE42F /* HashTagMedias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagMedias.swift; sourceTree = "<group>"; };
+		9AA46E16224C572E007FE42F /* TweetTagSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTagSearchViewModel.swift; sourceTree = "<group>"; };
+		9AA46E18224C6192007FE42F /* HashTagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagCell.swift; sourceTree = "<group>"; };
 		9CF0CCD64B240A560BEAC24E /* Pods-TwitterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterApp/Pods-TwitterApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B421E7086E96F82855C96331 /* Pods-TwitterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterApp/Pods-TwitterApp.release.xcconfig"; sourceTree = "<group>"; };
 		C474DB6093893FDDEFE065E7 /* Pods-TwitterAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterAppTests/Pods-TwitterAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -159,10 +171,12 @@
 		9AA46DCD224BD339007FE42F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9AA46DDD224BD680007FE42F /* Tweets.swift */,
-				9AA46DDF224BD689007FE42F /* Tweet.swift */,
+				9AA46DDD224BD680007FE42F /* LocationTweets.swift */,
+				9AA46DDF224BD689007FE42F /* LocationTweet.swift */,
 				9AA46DE1224BD706007FE42F /* Coordinates.swift */,
 				9AA46DF7224BED04007FE42F /* TweetAnnotation.swift */,
+				9AA46E11224C4CF5007FE42F /* Media.swift */,
+				9AA46E13224C5116007FE42F /* HashTagMedias.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -173,6 +187,7 @@
 				9AA46DE7224BDC6D007FE42F /* Main */,
 				9AA46DE5224BDC37007FE42F /* TweetDetails */,
 				9AA46DCF224BD34B007FE42F /* TweetMap */,
+				9AA46E0A224C3659007FE42F /* TweetTagSearch */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -180,8 +195,8 @@
 		9AA46DCF224BD34B007FE42F /* TweetMap */ = {
 			isa = PBXGroup;
 			children = (
-				9AA46E08224C23A2007FE42F /* TweetMapStrings.swift */,
 				9AA46DD6224BD41A007FE42F /* Layout */,
+				9AA46E08224C23A2007FE42F /* TweetMapStrings.swift */,
 				9AA46DD0224BD3E5007FE42F /* TweetMapViewController.swift */,
 			);
 			path = TweetMap;
@@ -256,6 +271,7 @@
 		9AA46DEF224BE003007FE42F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				9AA46E15224C5701007FE42F /* HashTags */,
 				9AA46DF9224BEDB4007FE42F /* TweetMap */,
 				9AA46DF0224BE013007FE42F /* TweetDetails */,
 			);
@@ -276,6 +292,24 @@
 				9AA46DFA224BEDC9007FE42F /* TweetMapViewModel.swift */,
 			);
 			path = TweetMap;
+			sourceTree = "<group>";
+		};
+		9AA46E0A224C3659007FE42F /* TweetTagSearch */ = {
+			isa = PBXGroup;
+			children = (
+				9AA46E0D224C3996007FE42F /* TweetSearchStrings.swift */,
+				9AA46E0F224C39FB007FE42F /* TweetTagSearchViewController.swift */,
+				9AA46E18224C6192007FE42F /* HashTagCell.swift */,
+			);
+			path = TweetTagSearch;
+			sourceTree = "<group>";
+		};
+		9AA46E15224C5701007FE42F /* HashTags */ = {
+			isa = PBXGroup;
+			children = (
+				9AA46E16224C572E007FE42F /* TweetTagSearchViewModel.swift */,
+			);
+			path = HashTags;
 			sourceTree = "<group>";
 		};
 		A16B9A59EE5977BD16B99230 /* Pods */ = {
@@ -492,21 +526,27 @@
 			files = (
 				9AA46E07224C21BA007FE42F /* TweetDetailsStrings.swift in Sources */,
 				9AA46DFF224C1063007FE42F /* String+Extension.swift in Sources */,
+				9AA46E0E224C3996007FE42F /* TweetSearchStrings.swift in Sources */,
 				9AA46DEE224BDF40007FE42F /* UIImageView+Extension.swift in Sources */,
 				9AA46DEC224BDDFD007FE42F /* UIViewController+Extension.swift in Sources */,
+				9AA46E17224C572E007FE42F /* TweetTagSearchViewModel.swift in Sources */,
 				9AA46DFD224BF915007FE42F /* TwitterService.swift in Sources */,
+				9AA46E12224C4CF5007FE42F /* Media.swift in Sources */,
 				9AA46E09224C23A2007FE42F /* TweetMapStrings.swift in Sources */,
 				9AA46E01224C1396007FE42F /* Localized.swift in Sources */,
 				9AA46E03224C1BDF007FE42F /* TwitterRequest.swift in Sources */,
 				9AA46DAE224BD1E1007FE42F /* AppDelegate.swift in Sources */,
+				9AA46E19224C6192007FE42F /* HashTagCell.swift in Sources */,
 				9AA46DE9224BDC9C007FE42F /* TweetDetailsViewController.swift in Sources */,
-				9AA46DE0224BD689007FE42F /* Tweet.swift in Sources */,
+				9AA46DE0224BD689007FE42F /* LocationTweet.swift in Sources */,
 				9AA46DF8224BED04007FE42F /* TweetAnnotation.swift in Sources */,
 				9AA46DD8224BD460007FE42F /* TweetMapLayoutView.swift in Sources */,
 				9AA46DD1224BD3E5007FE42F /* TweetMapViewController.swift in Sources */,
 				9AA46DF4224BE359007FE42F /* LocationManager.swift in Sources */,
-				9AA46DDE224BD680007FE42F /* Tweets.swift in Sources */,
+				9AA46E14224C5116007FE42F /* HashTagMedias.swift in Sources */,
+				9AA46DDE224BD680007FE42F /* LocationTweets.swift in Sources */,
 				9AA46DE2224BD706007FE42F /* Coordinates.swift in Sources */,
+				9AA46E10224C39FB007FE42F /* TweetTagSearchViewController.swift in Sources */,
 				9AA46DF2224BE025007FE42F /* TweetDetailsViewModel.swift in Sources */,
 				9AA46DF6224BEB03007FE42F /* TweetAnnotationView.swift in Sources */,
 				9AA46DFB224BEDC9007FE42F /* TweetMapViewModel.swift in Sources */,

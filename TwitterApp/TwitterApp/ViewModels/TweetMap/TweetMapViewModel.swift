@@ -10,16 +10,16 @@ import Foundation
 import CoreLocation
 
 protocol TweetMapViewModel: class {
-    var tweets: [Tweet] { get }
+    var tweets: [LocationTweet] { get }
     func fetchTweets(with location: CLLocationCoordinate2D, completion: @escaping (Bool) -> Void)
 }
 
 class TweetMapViewModelImpl: TweetMapViewModel {
     
-    private var allTweets: [Tweet] = []
+    private var allTweets: [LocationTweet] = []
     private let api: TwitterService!
     
-    var tweets: [Tweet] {
+    var tweets: [LocationTweet] {
         return allTweets
     }
     

@@ -8,14 +8,14 @@
 
 import Foundation
 
-struct Tweets {
-    var tweets: [Tweet] = []
+struct LocationTweets {
+    var tweets: [LocationTweet] = []
     
     init(with json: [String: Any]?) {
         guard let dictionary = json else { return }
         let tweetStatuses = dictionary[TweetsKeys.statuses] as? [Any]
         for statusDict in tweetStatuses! {
-            let status = Tweet(with: statusDict as? [String : Any])
+            let status = LocationTweet(with: statusDict as? [String : Any])
             if status.coordinates?.latitude != 0.0 && status.coordinates?.longitude != 0.0 {
                 tweets.append(status)
             }

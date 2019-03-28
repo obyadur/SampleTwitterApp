@@ -11,9 +11,10 @@ import TwitterKit
 import CoreLocation
 
 protocol TwitterService {
-    func fetchTweets(_ location: CLLocationCoordinate2D, completion: @escaping (Result<Tweets>) -> Void)
+    func fetchTweets(_ location: CLLocationCoordinate2D, completion: @escaping (Result<LocationTweets>) -> Void)
     func performTweetFavourited(_ id: String, completion: @escaping (Result<Bool>) -> Void)
     func performRetweet(_ id: String, completion: @escaping (Result<Bool>) -> Void)
+    func fetchHashTags(_ hashTag: String, completion: @escaping (Result<HashTagMedias>) -> Void)
 }
 
 class TwitterServiceImpl: TwitterService {
@@ -23,7 +24,7 @@ class TwitterServiceImpl: TwitterService {
         self.client = client
     }
     
-    func fetchTweets(_ location: CLLocationCoordinate2D, completion: @escaping (Result<Tweets>) -> Void) {
+    func fetchTweets(_ location: CLLocationCoordinate2D, completion: @escaping (Result<LocationTweets>) -> Void) {
         let request = TwitterRequestImpl.fetch(latitude: location.latitude, longitude: location.longitude, distance: Params.Fetch.distance)
         perform(request: request) { (data, error) in
             if let error = error {
@@ -32,7 +33,7 @@ class TwitterServiceImpl: TwitterService {
             } else {
                 do {
                     let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
-                    completion(Result.success(Tweets(with: json)))
+                    completion(Result.success(LocationTweets(with: json)))
                 } catch {
                     print("JSON Parsing failed.")
                     completion(Result.failure(APIError.jsonConversionFailure))
@@ -61,6 +62,24 @@ class TwitterServiceImpl: TwitterService {
                 completion(Result.failure(error))
             } else {
                 completion(Result.success(true))
+            }
+        }
+    }
+    
+    func fetchHashTags(_ hashTag: String, completion: @escaping (Result<HashTagMedias>) -> Void) {
+        let request = TwitterRequestImpl.searchHashTag(hashTag: hashTag)
+        perform(request: request) { (data, error) in
+            if let error = error {
+                print("Request failed: \(error.localizedDescription)")
+                completion(Result.failure(error))
+            } else {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
+                    completion(Result.success(HashTagMedias(with: json)))
+                } catch {
+                    print("JSON Parsing failed.")
+                    completion(Result.failure(APIError.jsonConversionFailure))
+                }
             }
         }
     }

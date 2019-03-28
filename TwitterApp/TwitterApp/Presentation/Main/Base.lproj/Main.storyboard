@@ -58,10 +58,99 @@
             </objects>
             <point key="canvasLocation" x="279.71014492753625" y="740.625"/>
         </scene>
+        <!--Tweet Tag Search View Controller-->
+        <scene sceneID="RdJ-ZF-zXv">
+            <objects>
+                <viewController storyboardIdentifier="TweetTagSearchViewController" id="66Q-5H-ORa" customClass="TweetTagSearchViewController" customModule="TwitterApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iNf-NH-7fq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search twitter tags" translatesAutoresizingMaskIntoConstraints="NO" id="WjE-cn-kNJ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="zoG-ms-mPM"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="66Q-5H-ORa" id="FEL-AV-0wM"/>
+                                </connections>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gga-ZY-eB8">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4yK-pg-4IQ">
+                                    <size key="itemSize" width="413" height="199"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HashTagCell" id="94B-Mi-ccx" customClass="HashTagCell" customModule="TwitterApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.5" y="0.0" width="413" height="199"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="413" height="199"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UEp-66-fsZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="413" height="199"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play" translatesAutoresizingMaskIntoConstraints="NO" id="YIO-0h-HyA">
+                                                    <rect key="frame" x="176.5" y="69.5" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="58r-bd-273"/>
+                                                        <constraint firstAttribute="height" constant="60" id="Ih1-js-hrx"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="UEp-66-fsZ" secondAttribute="trailing" id="AJD-1S-YeE"/>
+                                            <constraint firstItem="UEp-66-fsZ" firstAttribute="top" secondItem="94B-Mi-ccx" secondAttribute="top" id="Lt2-SH-e2S"/>
+                                            <constraint firstItem="YIO-0h-HyA" firstAttribute="centerY" secondItem="94B-Mi-ccx" secondAttribute="centerY" id="Tgx-WI-b1H"/>
+                                            <constraint firstItem="YIO-0h-HyA" firstAttribute="centerX" secondItem="94B-Mi-ccx" secondAttribute="centerX" id="iwz-Ya-iXX"/>
+                                            <constraint firstAttribute="bottom" secondItem="UEp-66-fsZ" secondAttribute="bottom" id="srA-IB-0Pd"/>
+                                            <constraint firstItem="UEp-66-fsZ" firstAttribute="leading" secondItem="94B-Mi-ccx" secondAttribute="leading" id="uJ0-mz-s4H"/>
+                                        </constraints>
+                                        <size key="customSize" width="413" height="199"/>
+                                        <connections>
+                                            <outlet property="mediaImageView" destination="UEp-66-fsZ" id="g03-Im-KK9"/>
+                                            <outlet property="playIcon" destination="YIO-0h-HyA" id="lSr-RU-BmW"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="66Q-5H-ORa" id="qhM-Bm-ct7"/>
+                                    <outlet property="delegate" destination="66Q-5H-ORa" id="t4D-T3-iV2"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WjE-cn-kNJ" firstAttribute="top" secondItem="rts-xX-wT4" secondAttribute="top" id="8xW-qJ-uYh"/>
+                            <constraint firstItem="gga-ZY-eB8" firstAttribute="trailing" secondItem="rts-xX-wT4" secondAttribute="trailing" id="V3w-wq-Iad"/>
+                            <constraint firstItem="gga-ZY-eB8" firstAttribute="bottom" secondItem="rts-xX-wT4" secondAttribute="bottom" id="XaS-e8-cqv"/>
+                            <constraint firstItem="WjE-cn-kNJ" firstAttribute="trailing" secondItem="rts-xX-wT4" secondAttribute="trailing" id="n3I-kI-yg2"/>
+                            <constraint firstItem="gga-ZY-eB8" firstAttribute="leading" secondItem="rts-xX-wT4" secondAttribute="leading" id="r5W-cr-OIn"/>
+                            <constraint firstItem="WjE-cn-kNJ" firstAttribute="leading" secondItem="rts-xX-wT4" secondAttribute="leading" id="tNz-wf-SPD"/>
+                            <constraint firstItem="gga-ZY-eB8" firstAttribute="top" secondItem="WjE-cn-kNJ" secondAttribute="bottom" id="vXA-E8-yBV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rts-xX-wT4"/>
+                    </view>
+                    <connections>
+                        <outlet property="tagsCollectionView" destination="gga-ZY-eB8" id="W1n-Gs-9eD"/>
+                        <outlet property="tagsSearchbar" destination="WjE-cn-kNJ" id="OnC-uc-ZBj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iZL-ec-ajV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1260.8695652173915" y="1603.7946428571429"/>
+        </scene>
         <!--Tweet Details View Controller-->
         <scene sceneID="kqA-Gw-2xw">
             <objects>
-                <viewController storyboardIdentifier="TweetDetailsViewController" id="LIV-M4-f2p" customClass="TweetDetailsViewController" customModule="PlanIT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TweetDetailsViewController" id="LIV-M4-f2p" customClass="TweetDetailsViewController" customModule="TwitterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Mb-TW-15X">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,4 +250,7 @@
             <point key="canvasLocation" x="2200" y="747"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="play" width="512" height="512"/>
+    </resources>
 </document>

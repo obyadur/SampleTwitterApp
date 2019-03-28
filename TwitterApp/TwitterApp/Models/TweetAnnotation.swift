@@ -12,9 +12,9 @@ import MapKit
 class TweetAnnotation: NSObject, MKAnnotation {
     
     var coordinate: CLLocationCoordinate2D
-    var tweet: Tweet!
+    var tweet: LocationTweet!
     
-    init(tweet: Tweet) {
+    init(tweet: LocationTweet) {
         self.tweet = tweet
         self.coordinate = CLLocationCoordinate2D(latitude: (tweet.coordinates?.latitude)!, longitude: (tweet.coordinates?.longitude)!)
     }
