@@ -56,13 +56,6 @@ private extension TweetTagSearchViewController {
             self.present(playerVC, animated: true, completion: nil)
         }
     }
-    
-    func test() {
-        let url = "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
-        if let playerVC = VideoPlayerController.initController(with: url) {
-            self.present(playerVC, animated: true, completion: nil)
-        }
-    }
 }
 
 extension TweetTagSearchViewController: UISearchBarDelegate {
@@ -92,17 +85,10 @@ extension TweetTagSearchViewController : UICollectionViewDelegate, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let media = viewModel.media(at: indexPath.row)
-//        if media?.type == .Photo {
-//            presentImageViewController(media!)
-//        } else if media?.type == .Photo {
-//            presentPlayerViewController(media!)
-//        }
-        
-        if indexPath.row == 0 {
-            test()
-        }
-        else {
+        if media?.type == .Photo {
             presentImageViewController(media!)
+        } else if media?.type == .Photo {
+            presentPlayerViewController(media!)
         }
     }
 }
