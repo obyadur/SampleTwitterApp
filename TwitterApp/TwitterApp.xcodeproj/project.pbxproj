@@ -39,6 +39,8 @@
 		9AA46E14224C5116007FE42F /* HashTagMedias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA46E13224C5116007FE42F /* HashTagMedias.swift */; };
 		9AA46E17224C572E007FE42F /* TweetTagSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA46E16224C572E007FE42F /* TweetTagSearchViewModel.swift */; };
 		9AA46E19224C6192007FE42F /* HashTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA46E18224C6192007FE42F /* HashTagCell.swift */; };
+		9AA46E1C224C6E63007FE42F /* DisplayImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA46E1B224C6E63007FE42F /* DisplayImageViewController.swift */; };
+		9AA46E1E224C6E81007FE42F /* VideoPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA46E1D224C6E81007FE42F /* VideoPlayerController.swift */; };
 		9BA1998CB82CE613C15D6A84 /* Pods_TwitterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97C4B266025E5703FFF3779 /* Pods_TwitterApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +91,8 @@
 		9AA46E13224C5116007FE42F /* HashTagMedias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagMedias.swift; sourceTree = "<group>"; };
 		9AA46E16224C572E007FE42F /* TweetTagSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTagSearchViewModel.swift; sourceTree = "<group>"; };
 		9AA46E18224C6192007FE42F /* HashTagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagCell.swift; sourceTree = "<group>"; };
+		9AA46E1B224C6E63007FE42F /* DisplayImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayImageViewController.swift; sourceTree = "<group>"; };
+		9AA46E1D224C6E81007FE42F /* VideoPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VideoPlayerController.swift; path = /Users/obyadurrahman/Desktop/Test/GIT/SampleTwitterApp/TwitterApp/TwitterApp/Presentation/Player/VideoPlayerController.swift; sourceTree = "<absolute>"; };
 		9CF0CCD64B240A560BEAC24E /* Pods-TwitterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterApp/Pods-TwitterApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B421E7086E96F82855C96331 /* Pods-TwitterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterApp/Pods-TwitterApp.release.xcconfig"; sourceTree = "<group>"; };
 		C474DB6093893FDDEFE065E7 /* Pods-TwitterAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterAppTests/Pods-TwitterAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 		9AA46DCE224BD340007FE42F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				9AA46E1A224C6E26007FE42F /* Player */,
 				9AA46DE7224BDC6D007FE42F /* Main */,
 				9AA46DE5224BDC37007FE42F /* TweetDetails */,
 				9AA46DCF224BD34B007FE42F /* TweetMap */,
@@ -297,9 +302,9 @@
 		9AA46E0A224C3659007FE42F /* TweetTagSearch */ = {
 			isa = PBXGroup;
 			children = (
+				9AA46E1F224C7572007FE42F /* Cell */,
 				9AA46E0D224C3996007FE42F /* TweetSearchStrings.swift */,
 				9AA46E0F224C39FB007FE42F /* TweetTagSearchViewController.swift */,
-				9AA46E18224C6192007FE42F /* HashTagCell.swift */,
 			);
 			path = TweetTagSearch;
 			sourceTree = "<group>";
@@ -310,6 +315,23 @@
 				9AA46E16224C572E007FE42F /* TweetTagSearchViewModel.swift */,
 			);
 			path = HashTags;
+			sourceTree = "<group>";
+		};
+		9AA46E1A224C6E26007FE42F /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				9AA46E1D224C6E81007FE42F /* VideoPlayerController.swift */,
+				9AA46E1B224C6E63007FE42F /* DisplayImageViewController.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		9AA46E1F224C7572007FE42F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9AA46E18224C6192007FE42F /* HashTagCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		A16B9A59EE5977BD16B99230 /* Pods */ = {
@@ -525,6 +547,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AA46E07224C21BA007FE42F /* TweetDetailsStrings.swift in Sources */,
+				9AA46E1C224C6E63007FE42F /* DisplayImageViewController.swift in Sources */,
 				9AA46DFF224C1063007FE42F /* String+Extension.swift in Sources */,
 				9AA46E0E224C3996007FE42F /* TweetSearchStrings.swift in Sources */,
 				9AA46DEE224BDF40007FE42F /* UIImageView+Extension.swift in Sources */,
@@ -537,6 +560,7 @@
 				9AA46E03224C1BDF007FE42F /* TwitterRequest.swift in Sources */,
 				9AA46DAE224BD1E1007FE42F /* AppDelegate.swift in Sources */,
 				9AA46E19224C6192007FE42F /* HashTagCell.swift in Sources */,
+				9AA46E1E224C6E81007FE42F /* VideoPlayerController.swift in Sources */,
 				9AA46DE9224BDC9C007FE42F /* TweetDetailsViewController.swift in Sources */,
 				9AA46DE0224BD689007FE42F /* LocationTweet.swift in Sources */,
 				9AA46DF8224BED04007FE42F /* TweetAnnotation.swift in Sources */,

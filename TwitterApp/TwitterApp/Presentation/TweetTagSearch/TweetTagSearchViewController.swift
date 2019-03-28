@@ -9,7 +9,7 @@
 import UIKit
 
 class TweetTagSearchViewController: UIViewController {
-
+    static var temp = 1
     @IBOutlet weak var tagsSearchbar: UISearchBar!
     @IBOutlet weak var tagsCollectionView: UICollectionView!
     
@@ -44,16 +44,34 @@ private extension TweetTagSearchViewController {
             }
         }
     }
+    
+    func presentImageViewController(_ media: Media) {
+        if let imageVC = DisplayImageViewController.initController(with: media.url!) {
+            self.present(imageVC, animated: true, completion: nil)
+        }
+    }
+    
+    func presentPlayerViewController(_ media: Media) {
+        if let playerVC = VideoPlayerController.initController(with: media.videoUrl!) {
+            self.present(playerVC, animated: true, completion: nil)
+        }
+    }
+    
+    func test() {
+        let url = "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+        if let playerVC = VideoPlayerController.initController(with: url) {
+            self.present(playerVC, animated: true, completion: nil)
+        }
+    }
 }
-
 
 extension TweetTagSearchViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let text = searchBar.text else {
+        searchBar.resignFirstResponder()
+        guard let text = searchBar.text, !text.isEmpty else {
             return
         }
-        searchBar.resignFirstResponder()
         fetchHashTags(text)
     }
 }
@@ -74,6 +92,17 @@ extension TweetTagSearchViewController : UICollectionViewDelegate, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let media = viewModel.media(at: indexPath.row)
+//        if media?.type == .Photo {
+//            presentImageViewController(media!)
+//        } else if media?.type == .Photo {
+//            presentPlayerViewController(media!)
+//        }
         
+        if indexPath.row == 0 {
+            test()
+        }
+        else {
+            presentImageViewController(media!)
+        }
     }
 }
